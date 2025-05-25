@@ -121,14 +121,14 @@
   - `hasAwayTeam: Equipe_RealMadrid`
   - `hasReferee: Arbitre_Turpin`
   - `organiseMatch: Competition_LigueDesChampions`
-  - `hasResult: Resultat_2_1`
+  - `hasMatchWinner: Equipe_PSG`
 
 - `Match_France_Espagne` 
   - `hasHomeTeam: Equipe_France`
   - `hasAwayTeam: Equipe_Espagne`
   - `hasReferee: Arbitre_Oliver`
   - `organiseMatch: Competition_CoupeDuMonde`
-  - `hasResult: Resultat_3_1`
+  - `hasMatchWinner: Equipe_Espagne`
 
 ## Instances de Résultat
 - `Resultat_2_1` (PSG 2-1 Real Madrid)
