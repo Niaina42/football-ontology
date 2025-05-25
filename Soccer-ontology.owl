@@ -13,7 +13,7 @@
 #    Object Properties
 #################################################################
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#coaches
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/coaches
 :coaches rdf:type owl:ObjectProperty ;
          rdfs:subPropertyOf :hasRole ;
          rdfs:domain :Entraineur ;
@@ -22,7 +22,7 @@
                       "Répond aux questions: \"Quelle équipe cet entraineur dirige-t-il?\"" .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#hasAwayTeam
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/hasAwayTeam
 :hasAwayTeam rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf :hasParticipant ;
              rdfs:domain :Match ;
@@ -30,7 +30,7 @@
              rdfs:comment "Indique l'équipe qui joue à l'exterieur" .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#hasEvent
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/hasEvent
 :hasEvent rdf:type owl:ObjectProperty ;
           rdfs:subPropertyOf :hasTemporalRelation ;
           owl:inverseOf :isEventOf ;
@@ -43,7 +43,7 @@
                        "Répond aux questions: \"Quels événements ont lieu pendant un match?\"" .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#hasHomeTeam
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/hasHomeTeam
 :hasHomeTeam rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf :hasParticipant ;
              rdfs:domain :Match ;
@@ -52,14 +52,14 @@
                           "Répond aux questions: \"Quelle est l'équipe à domicile?\"" .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#hasInversOf
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/hasInversOf
 :hasInversOf rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf owl:topObjectProperty ;
              rdfs:domain owl:Thing ;
              rdfs:range owl:Thing .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#hasMatchWinner
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/hasMatchWinner
 :hasMatchWinner rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf :hasResult ;
                 rdfs:domain :Match ;
@@ -67,7 +67,7 @@
                 rdfs:comment "Indique qui gange dans un match" .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#hasParticipant
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/hasParticipant
 :hasParticipant rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf owl:topObjectProperty ;
                 owl:inverseOf :isParticipantOf ;
@@ -76,7 +76,7 @@
                 rdfs:comment "Relation générique de participation" .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#hasParticipatingTeam
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/hasParticipatingTeam
 :hasParticipatingTeam rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf :hasParticipant ;
                       rdfs:domain :Compétition ;
@@ -85,17 +85,18 @@
                                    "Répond aux questions: \"Quelles équipes participent à une compétition?\"" .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#hasPlayer
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/hasPlayer
 :hasPlayer rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf :hasParticipant ;
-           owl:inverseOf :isPlayerOf ;
+           owl:inverseOf :isPlayerOf ,
+                         :memberOf ;
            rdfs:domain :Équipe ;
            rdfs:range :Joueur ;
            rdfs:comment "Relie une équipe à ses joueurs" ,
                         "Répond aux questions: \"Quels joueurs font partie de cette équipe?\"" .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#hasPosition
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/hasPosition
 :hasPosition rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf :hasRole ;
              rdfs:domain :Joueur ;
@@ -104,7 +105,7 @@
                           "Répond aux questions: \"Quel est le poste de ce joueur?\"" .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#hasReferee
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/hasReferee
 :hasReferee rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf :hasParticipant ;
             owl:inverseOf :isRefereeOf ;
@@ -114,7 +115,7 @@
                          "Relie un match à son arbitre" .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#hasResult
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/hasResult
 :hasResult rdf:type owl:ObjectProperty ;
            owl:inverseOf :isResultOf ;
            rdfs:domain :Match ;
@@ -123,14 +124,14 @@
                         "Répond aux questions: \"Quel est le résultat d'un match?\"" .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#hasRole
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/hasRole
 :hasRole rdf:type owl:ObjectProperty ;
          rdfs:domain owl:Thing ;
          rdfs:range owl:Thing ;
          rdfs:comment "Relation de rôle" .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#hasStaff
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/hasStaff
 :hasStaff rdf:type owl:ObjectProperty ;
           rdfs:subPropertyOf :hasParticipant ;
           rdfs:domain :Équipe ;
@@ -139,14 +140,14 @@
                        "Répond aux questions: \"Qui fait partie du personnel de cette équipe?\"" .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#hasTemporalRelation
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/hasTemporalRelation
 :hasTemporalRelation rdf:type owl:ObjectProperty ;
                      rdfs:domain owl:Thing ;
                      rdfs:range owl:Thing ;
                      rdfs:comment "Relation temporelle entre entités" .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#hasWinner
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/hasWinner
 :hasWinner rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf :hasParticipant ;
            rdfs:domain :Compétition ;
@@ -155,7 +156,7 @@
                         "Répond aux questions: \"Quelle équipe a gagné une compétition?\"" .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#involvePlayer
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/involvePlayer
 :involvePlayer rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf :hasParticipant ;
                owl:inverseOf :isPlayerInvolvedIn ;
@@ -168,32 +169,32 @@
                             "Répond aux questions: \"Quel joueur est impliqué dans cet événement?\"" .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#isEventOf
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/isEventOf
 :isEventOf rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf :hasInversOf .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#isParticipantOf
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/isParticipantOf
 :isParticipantOf rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf :hasInversOf .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#isPlayerInvolvedIn
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/isPlayerInvolvedIn
 :isPlayerInvolvedIn rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf :hasInversOf .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#isPlayerOf
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/isPlayerOf
 :isPlayerOf rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf :hasInversOf .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#isRefereeOf
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/isRefereeOf
 :isRefereeOf rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf :hasInversOf .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#isResultOf
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/isResultOf
 :isResultOf rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf :hasInversOf ;
             rdfs:domain :Résultat ;
@@ -201,16 +202,17 @@
             rdfs:comment "Résultat du match" .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#memberOf
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/memberOf
 :memberOf rdf:type owl:ObjectProperty ;
           rdfs:subPropertyOf :hasRole ;
-          rdfs:domain :Personne ;
+          rdfs:domain :Joueur ,
+                      :Personne ;
           rdfs:range :Équipe ;
           rdfs:comment "Relie une personne à l'équipe dont elle est membre" ,
                        "Répond aux questions: \"À quelle équipe appartient cette personne?\"" .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#occursDuring
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/occursDuring
 :occursDuring rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf :hasTemporalRelation ;
               owl:inverseOf :occursIn ;
@@ -223,12 +225,12 @@
                            "Répond aux questions: \"Pendant quel match cet événement s'est-il produit?\"" .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#occursIn
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/occursIn
 :occursIn rdf:type owl:ObjectProperty ;
           rdfs:subPropertyOf :hasInversOf .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#organiseMatch
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/organiseMatch
 :organiseMatch rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf :hasParticipant ;
                rdfs:domain :Compétition ;
@@ -237,7 +239,7 @@
                             "Répond aux questions: \"Quels matchs font partie d'une compétition?\"" .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#participatesIn
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/participatesIn
 :participatesIn rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf :hasRole ;
                 rdfs:domain :Équipe ;
@@ -246,7 +248,7 @@
                              "Répond aux questions: \"À quelles compétitions cette équipe participe-t-elle?\"" .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#replacedByPlayer
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/replacedByPlayer
 :replacedByPlayer rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf :involvePlayer ;
                   rdfs:domain :Remplacement ;
@@ -255,7 +257,7 @@
                                "Joueur qui entre" .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#replacesPlayer
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/replacesPlayer
 :replacesPlayer rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf :involvePlayer ;
                 rdfs:domain :Remplacement ;
@@ -264,7 +266,7 @@
                              "Répond aux questions: \"Quel joueur est remplacé?\"" .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#representsClub
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/representsClub
 :representsClub rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf :hasRole ;
                 rdfs:domain :Equipe_de_club ;
@@ -273,7 +275,7 @@
                              "Répond aux questions: \"Quel club cette équipe représente-t-elle?\"" .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#representsCountry
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/representsCountry
 :representsCountry rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf :hasRole ;
                    rdfs:domain :Equipe_Nationale ;
@@ -282,7 +284,7 @@
                                 "Répond aux questions: \"Quel pays cette équipe nationale représente-t-elle?\"" .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#resultsInFaute
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/resultsInFaute
 :resultsInFaute rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf :hasTemporalRelation ;
                 rdfs:domain :Faute ;
@@ -291,7 +293,7 @@
                              "Répond aux questions: \"Quelle sanction résulte de cette faute?\"" .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#scoredAgainst
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/scoredAgainst
 :scoredAgainst rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf :hasParticipant ;
                rdfs:domain :But ;
@@ -300,7 +302,7 @@
                             "Équipe contre laquelle le but est marqué" .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#scoredBy
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/scoredBy
 :scoredBy rdf:type owl:ObjectProperty ;
           rdfs:subPropertyOf :involvePlayer ;
           rdfs:domain :Joueur ;
@@ -309,7 +311,7 @@
                        "Répond aux questions: \"Qui a marqué ce but?\"" .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#scoredFor
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/scoredFor
 :scoredFor rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf :hasParticipant ;
            rdfs:domain :But ;
@@ -318,7 +320,7 @@
                         "Équipe pour laquelle le but est marqué" .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#supports
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/supports
 :supports rdf:type owl:ObjectProperty ;
           rdfs:subPropertyOf :hasRole ;
           rdfs:domain :Supporter ;
@@ -408,31 +410,6 @@
 #    Classes
 #################################################################
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#Club
-:Club rdf:type owl:Class ;
-      rdfs:subClassOf :Type ;
-      owl:disjointWith :Pays .
-
-
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#Pays
-:Pays rdf:type owl:Class ;
-      rdfs:subClassOf :Type .
-
-
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#Résultat
-:Résultat rdf:type owl:Class ;
-          rdfs:subClassOf :Match ;
-          owl:disjointWith :But ,
-                           :Carton ,
-                           :Faute ,
-                           :Remplacement ;
-          rdfs:comment "Indique le résultat d'un match" .
-
-
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#Type
-:Type rdf:type owl:Class .
-
-
 ###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Arbitre
 :Arbitre rdf:type owl:Class ;
          rdfs:subClassOf :Personne ;
@@ -452,17 +429,12 @@
 ###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/But
 :But rdf:type owl:Class ;
      rdfs:subClassOf :Match ;
-     owl:disjointWith :Carton ,
-                      :Faute ,
-                      :Remplacement ;
      rdfs:comment "Action de marquer" .
 
 
 ###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Carton
 :Carton rdf:type owl:Class ;
         rdfs:subClassOf :Match ;
-        owl:disjointWith :Faute ,
-                         :Remplacement ;
         rdfs:comment "Sanctions disciplinaires" .
 
 
@@ -472,6 +444,12 @@
              owl:disjointWith :Coupe ,
                               :Tournoi ;
              rdfs:comment "Compétitions de longue durée avec classements" .
+
+
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Club
+:Club rdf:type owl:Class ;
+      rdfs:subClassOf :Type ;
+      owl:disjointWith :Pays .
 
 
 ###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Compétition
@@ -517,7 +495,6 @@
 ###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Faute
 :Faute rdf:type owl:Class ;
        rdfs:subClassOf :Match ;
-       owl:disjointWith :Remplacement ;
        rdfs:comment "Infractions aux règles du jeu" .
 
 
@@ -553,6 +530,11 @@
 :Milieu rdf:type owl:Class ;
         rdfs:subClassOf :Poste ;
         rdfs:comment "Joueurs opérant au centre du terrain, liant défense et attaque" .
+
+
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Pays
+:Pays rdf:type owl:Class ;
+      rdfs:subClassOf :Type .
 
 
 ###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Personne
@@ -591,6 +573,12 @@
        rdfs:comment "Exclusion" .
 
 
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Résultat
+:Résultat rdf:type owl:Class ;
+          rdfs:subClassOf :Match ;
+          rdfs:comment "Indique le résultat d'un match" .
+
+
 ###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Supporter
 :Supporter rdf:type owl:Class ;
            rdfs:subClassOf :Personne ;
@@ -603,6 +591,10 @@
          rdfs:comment "Compétitions à durée limitée (Coupe du Monde, Euro)" .
 
 
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Type
+:Type rdf:type owl:Class .
+
+
 ###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Équipe
 :Équipe rdf:type owl:Class ;
         rdfs:comment "Groupes organisés de joueurs" .
@@ -612,17 +604,17 @@
 #    Individuals
 #################################################################
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#Arbitre_Oliver
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Arbitre_Oliver
 :Arbitre_Oliver rdf:type owl:NamedIndividual ,
                          :Arbitre .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#Arbitre_Turpin
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Arbitre_Turpin
 :Arbitre_Turpin rdf:type owl:NamedIndividual ,
                          :Arbitre .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#But_Dembele_1
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/But_Dembele_1
 :But_Dembele_1 rdf:type owl:NamedIndividual ,
                         :But ;
                :involvePlayer :Joueur_Dembele ;
@@ -632,7 +624,7 @@
                :scoredFor :Equipe_PSG .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#But_Dembele_2
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/But_Dembele_2
 :But_Dembele_2 rdf:type owl:NamedIndividual ,
                         :But ;
                :involvePlayer :Joueur_Dembele ;
@@ -642,7 +634,7 @@
                :scoredFor :Equipe_PSG .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#But_Mbappe_1
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/But_Mbappe_1
 :But_Mbappe_1 rdf:type owl:NamedIndividual ,
                        :But ;
               :involvePlayer :Joueur_Mbappe ;
@@ -652,7 +644,7 @@
               :scoredFor :Equipe_RealMadrid .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#But_Mbappe_3
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/But_Mbappe_3
 :But_Mbappe_3 rdf:type owl:NamedIndividual ,
                        :But ;
               :occursDuring :Match_France_Espagne ;
@@ -661,7 +653,7 @@
               :scoredFor :Equipe_France .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#But_Morata
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/But_Morata
 :But_Morata rdf:type owl:NamedIndividual ,
                      :But ;
             :occursDuring :Match_France_Espagne ;
@@ -670,7 +662,7 @@
             :scoredFor :Equipe_Espagne .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#But_Morata_2
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/But_Morata_2
 :But_Morata_2 rdf:type owl:NamedIndividual ,
                        :But ;
               :involvePlayer :Joueur_Morata ;
@@ -680,34 +672,34 @@
               :scoredFor :Equipe_Espagne .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#Carton_Jaune_Bellingham
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Carton_Jaune_Bellingham
 :Carton_Jaune_Bellingham rdf:type owl:NamedIndividual ,
                                   :Jaune ;
                          :involvePlayer :Joueur_Bellingham ;
                          :occursDuring :Match_PSG_Real .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#Club_Bayern
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Club_Bayern
 :Club_Bayern rdf:type owl:NamedIndividual ,
                       :Club .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#Club_ManCity
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Club_ManCity
 :Club_ManCity rdf:type owl:NamedIndividual ,
                        :Club .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#Club_PSG
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Club_PSG
 :Club_PSG rdf:type owl:NamedIndividual ,
                    :Club .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#Club_RealMadrid
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Club_RealMadrid
 :Club_RealMadrid rdf:type owl:NamedIndividual ,
                           :Club .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#Competition_CoupeDuMonde
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Competition_CoupeDuMonde
 :Competition_CoupeDuMonde rdf:type owl:NamedIndividual ,
                                    :Tournoi ;
                           :hasParticipatingTeam :Equipe_Allemagne ,
@@ -717,21 +709,21 @@
                           :hasWinner :Equipe_France .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#Competition_LaLiga
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Competition_LaLiga
 :Competition_LaLiga rdf:type owl:NamedIndividual ,
                              :Championnat ;
                     :hasParticipatingTeam :Equipe_RealMadrid ;
                     :hasWinner :Equipe_RealMadrid .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#Competition_Ligue1
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Competition_Ligue1
 :Competition_Ligue1 rdf:type owl:NamedIndividual ,
                              :Championnat ;
                     :hasParticipatingTeam :Equipe_PSG ;
                     :hasWinner :Equipe_PSG .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#Competition_LigueDesChampions
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Competition_LigueDesChampions
 :Competition_LigueDesChampions rdf:type owl:NamedIndividual ,
                                         :Coupe ;
                                :hasParticipatingTeam :Equipe_Bayern ,
@@ -740,77 +732,73 @@
                                                      :Equipe_RealMadrid .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#Entraineur_Ancelotti
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Entraineur_Ancelotti
 :Entraineur_Ancelotti rdf:type owl:NamedIndividual ,
                                :Entraineur ;
                       :coaches :Equipe_RealMadrid .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#Entraineur_Deschamps
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Entraineur_Deschamps
 :Entraineur_Deschamps rdf:type owl:NamedIndividual ,
                                :Entraineur ;
                       :coaches :Equipe_France .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#Entraineur_Luis_Enrique
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Entraineur_Luis_Enrique
 :Entraineur_Luis_Enrique rdf:type owl:NamedIndividual ,
                                   :Entraineur ;
                          :coaches :Equipe_PSG .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#Equipe_Allemagne
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Equipe_Allemagne
 :Equipe_Allemagne rdf:type owl:NamedIndividual ,
                            :Equipe_Nationale ;
                   :representsCountry :Pays_Allemagne .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#Equipe_Angleterre
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Equipe_Angleterre
 :Equipe_Angleterre rdf:type owl:NamedIndividual ,
                             :Equipe_Nationale ;
                    :representsCountry :Pays_Angleterre .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#Equipe_Bayern
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Equipe_Bayern
 :Equipe_Bayern rdf:type owl:NamedIndividual ,
                         :Equipe_de_club ;
                :representsClub :Club_Bayern .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#Equipe_Espagne
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Equipe_Espagne
 :Equipe_Espagne rdf:type owl:NamedIndividual ,
                          :Equipe_Nationale ;
                 :representsCountry :Pays_Espagne .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#Equipe_France
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Equipe_France
 :Equipe_France rdf:type owl:NamedIndividual ,
                         :Equipe_Nationale ;
-               :hasAwayTeam :Equipe_Espagne ;
-               :hasMatchWinner :Equipe_Espagne ;
-               :hasReferee :Arbitre_Oliver ;
-               :organiseMatch :Competition_CoupeDuMonde ;
                :representsCountry :Pays_France .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#Equipe_ManCity
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Equipe_ManCity
 :Equipe_ManCity rdf:type owl:NamedIndividual ,
                          :Equipe_de_club ;
                 :representsClub :Club_ManCity .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#Equipe_PSG
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Equipe_PSG
 :Equipe_PSG rdf:type owl:NamedIndividual ,
                      :Equipe_de_club ;
             :representsClub :Club_PSG .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#Equipe_RealMadrid
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Equipe_RealMadrid
 :Equipe_RealMadrid rdf:type owl:NamedIndividual ,
                             :Equipe_de_club ;
                    :representsClub :Club_RealMadrid .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#Faute_Bellingham
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Faute_Bellingham
 :Faute_Bellingham rdf:type owl:NamedIndividual ,
                            :Faute ;
                   :involvePlayer :Joueur_Bellingham ;
@@ -818,7 +806,7 @@
                   :resultsInFaute :Carton_Jaune_Bellingham .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#Joueur_Bellingham
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Joueur_Bellingham
 :Joueur_Bellingham rdf:type owl:NamedIndividual ,
                             :Joueur ;
                    :hasPosition :Poste_Milieu_Offensif ;
@@ -826,14 +814,14 @@
                              :Equipe_RealMadrid .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#Joueur_Courtois
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Joueur_Courtois
 :Joueur_Courtois rdf:type owl:NamedIndividual ,
                           :Joueur ;
                  :hasPosition :Poste_Gardien ;
                  :memberOf :Equipe_RealMadrid .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#Joueur_Dembele
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Joueur_Dembele
 :Joueur_Dembele rdf:type owl:NamedIndividual ,
                          :Joueur ;
                 :hasPosition :Poste_Ailier_Droit ;
@@ -841,20 +829,20 @@
                           :Equipe_PSG .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#Joueur_Donnarumma
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Joueur_Donnarumma
 :Joueur_Donnarumma rdf:type owl:NamedIndividual ,
                             :Joueur ;
                    :hasPosition :Poste_Gardien ;
                    :memberOf :Equipe_PSG .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#Joueur_Lee
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Joueur_Lee
 :Joueur_Lee rdf:type owl:NamedIndividual ,
                      :Joueur ;
             :memberOf :Equipe_France .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#Joueur_Mbappe
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Joueur_Mbappe
 :Joueur_Mbappe rdf:type owl:NamedIndividual ,
                         :Joueur ;
                :hasPosition :Poste_Attaquant_Centre ;
@@ -862,117 +850,120 @@
                          :Equipe_RealMadrid .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#Joueur_Morata
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Joueur_Morata
 :Joueur_Morata rdf:type owl:NamedIndividual ,
                         :Joueur ;
                :memberOf :Equipe_Espagne .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#Match_France_Espagne
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Match_France_Espagne
 :Match_France_Espagne rdf:type owl:NamedIndividual ,
                                :Match ;
                       :hasAwayTeam :Equipe_Espagne ;
+                      :hasEvent :But_Morata ,
+                                :But_Morata_2 ;
                       :hasHomeTeam :Equipe_France ;
                       :hasMatchWinner :Equipe_Espagne ;
                       :hasReferee :Arbitre_Oliver ;
-                      :involvePlayer :Joueur_Mbappe ,
-                                     :Joueur_Morata ;
                       :organiseMatch :Competition_CoupeDuMonde .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#Match_PSG_Real
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Match_PSG_Real
 :Match_PSG_Real rdf:type owl:NamedIndividual ,
                          :Match ;
                 :hasAwayTeam :Equipe_RealMadrid ;
+                :hasEvent :Carton_Jaune_Bellingham ,
+                          :Faute_Bellingham ,
+                          :Remplacement_Dembele ;
                 :hasHomeTeam :Equipe_PSG ;
                 :hasMatchWinner :Equipe_PSG ;
                 :hasReferee :Arbitre_Turpin ;
                 :organiseMatch :Competition_LigueDesChampions .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#Pays_Allemagne
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Pays_Allemagne
 :Pays_Allemagne rdf:type owl:NamedIndividual ,
                          :Pays .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#Pays_Angleterre
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Pays_Angleterre
 :Pays_Angleterre rdf:type owl:NamedIndividual ,
                           :Pays .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#Pays_Espagne
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Pays_Espagne
 :Pays_Espagne rdf:type owl:NamedIndividual ,
                        :Pays .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#Pays_France
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Pays_France
 :Pays_France rdf:type owl:NamedIndividual ,
                       :Pays .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#Personnel_Medecin_PSG
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Personnel_Medecin_PSG
 :Personnel_Medecin_PSG rdf:type owl:NamedIndividual ,
                                 :Personnel ;
                        :hasStaff :Equipe_PSG .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#Personnel_Preparateur_Real
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Personnel_Preparateur_Real
 :Personnel_Preparateur_Real rdf:type owl:NamedIndividual ,
                                      :Personnel ;
                             :hasStaff :Equipe_RealMadrid .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#Poste_Ailier_Droit
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Poste_Ailier_Droit
 :Poste_Ailier_Droit rdf:type owl:NamedIndividual ,
                              :Attaquant .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#Poste_Ailier_Gauche
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Poste_Ailier_Gauche
 :Poste_Ailier_Gauche rdf:type owl:NamedIndividual ,
                               :Attaquant .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#Poste_Attaquant_Centre
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Poste_Attaquant_Centre
 :Poste_Attaquant_Centre rdf:type owl:NamedIndividual ,
                                  :Attaquant .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#Poste_Defenseur_Central
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Poste_Defenseur_Central
 :Poste_Defenseur_Central rdf:type owl:NamedIndividual ,
                                   :Défenseur .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#Poste_Gardien
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Poste_Gardien
 :Poste_Gardien rdf:type owl:NamedIndividual ,
                         :Gardien_de_but .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#Poste_Lateral_Droit
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Poste_Lateral_Droit
 :Poste_Lateral_Droit rdf:type owl:NamedIndividual ,
                               :Défenseur .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#Poste_Lateral_Gauche
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Poste_Lateral_Gauche
 :Poste_Lateral_Gauche rdf:type owl:NamedIndividual ,
                                :Défenseur .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#Poste_Milieu_Central
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Poste_Milieu_Central
 :Poste_Milieu_Central rdf:type owl:NamedIndividual ,
                                :Milieu .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#Poste_Milieu_Defensif
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Poste_Milieu_Defensif
 :Poste_Milieu_Defensif rdf:type owl:NamedIndividual ,
                                 :Milieu .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#Poste_Milieu_Offensif
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Poste_Milieu_Offensif
 :Poste_Milieu_Offensif rdf:type owl:NamedIndividual ,
                                 :Milieu .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#Remplacement_Dembele
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Remplacement_Dembele
 :Remplacement_Dembele rdf:type owl:NamedIndividual ,
                                :Remplacement ;
                       :occursDuring :Match_PSG_Real ;
@@ -980,27 +971,27 @@
                       :replacesPlayer :Joueur_Dembele .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#Resultat_2_1
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Resultat_2_1
 :Resultat_2_1 rdf:type owl:NamedIndividual ,
                        :Résultat ;
               :isResultOf :Match_PSG_Real ;
               :Nom "(PSG 2-1 Real Madrid)" .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#Resultat_3_1
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Resultat_3_1
 :Resultat_3_1 rdf:type owl:NamedIndividual ,
                        :Résultat ;
               :isResultOf :Match_France_Espagne ;
               :Nom "(France 3-1 Espagne)" .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#Supporter_Jean
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Supporter_Jean
 :Supporter_Jean rdf:type owl:NamedIndividual ,
                          :Supporter ;
                 :supports :Equipe_PSG .
 
 
-###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology#Supporter_Miguel
+###  http://www.semanticweb.org/dc/ontologies/2025/3/soccer-ontology/Supporter_Miguel
 :Supporter_Miguel rdf:type owl:NamedIndividual ,
                            :Supporter ;
                   :supports :Equipe_RealMadrid .

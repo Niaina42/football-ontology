@@ -46,16 +46,6 @@ Match and hasEvent some (Carton and Jaune)
 Match and hasEvent some Remplacement
 ```
 
-### CQ8: Quels matchs ont été remportés par l'équipe jouant à domicile?
-**DL Query:**
-```
-Match and hasHomeTeam some (Équipe and hasMatchWinner value "true"^^xsd:boolean)
-```
-ou plus simplement:
-```
-Match and (hasHomeTeam some Équipe) and (hasMatchWinner some Équipe)
-```
-
 ## Questions sur les Événements de Match
 
 ### CQ9: Quels types d'événements peuvent se produire pendant un match?
