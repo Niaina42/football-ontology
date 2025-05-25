@@ -2,28 +2,6 @@
 
 Voici une hiérarchie d'object properties (propriétés d'objets) organisée pour répondre aux competency questions précédemment identifiées. Ces propriétés établissent les relations entre les classes de l'ontologie.
 
-## Propriétés de haut niveau
-
-### hasParticipant
-- **Domaine**: Thing
-- **Range**: Thing
-- **Description**: Relation générique de participation
-
-### hasTemporalRelation
-- **Domaine**: Thing
-- **Range**: Thing
-- **Description**: Relation temporelle entre entités
-
-### hasSpatialRelation
-- **Domaine**: Thing
-- **Range**: Thing
-- **Description**: Relation spatiale entre entités
-
-### hasRole
-- **Domaine**: Thing
-- **Range**: Thing
-- **Description**: Relation de rôle
-
 ## Propriétés liées aux Compétitions
 
 ### organiseMatch (sous-propriété de hasParticipant)
