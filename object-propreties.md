@@ -2,6 +2,23 @@
 
 Voici une hiérarchie d'object properties (propriétés d'objets) organisée pour répondre aux competency questions précédemment identifiées. Ces propriétés établissent les relations entre les classes de l'ontologie.
 
+## Propriétés de haut niveau
+
+### hasParticipant
+- **Domaine**: Thing
+- **Range**: Thing
+- **Description**: Relation générique de participation
+
+### hasTemporalRelation
+- **Domaine**: Thing
+- **Range**: Thing
+- **Description**: Relation temporelle entre entités
+
+### hasRole
+- **Domaine**: Thing
+- **Range**: Thing
+- **Description**: Relation de rôle
+  
 ## Propriétés liées aux Compétitions
 
 ### organiseMatch (sous-propriété de hasParticipant)
@@ -22,12 +39,6 @@ Voici une hiérarchie d'object properties (propriétés d'objets) organisée pou
 - **Description**: Indique l'équipe gagnante d'une compétition
 - **Répond aux questions**: "Quelle équipe a gagné une compétition?"
 
-### hasFormat
-- **Domaine**: Compétition
-- **Range**: Format (classe à ajouter)
-- **Description**: Spécifie le format d'une compétition
-- **Répond aux questions**: "Comment est structurée une compétition?"
-
 ## Propriétés liées aux Matchs
 
 ### hasHomeTeam (sous-propriété de hasParticipant)
@@ -35,12 +46,6 @@ Voici une hiérarchie d'object properties (propriétés d'objets) organisée pou
 - **Range**: Équipe
 - **Description**: Indique l'équipe qui joue à domicile
 - **Répond aux questions**: "Quelle est l'équipe à domicile?"
-
-### hasAwayTeam (sous-propriété de hasParticipant)
-- **Domaine**: Match
-- **Range**: Équipe
-- **Description**: Indique l'équipe qui joue à l'extérieur
-- **Répond aux questions**: "Quelle est l'équipe à l'extérieur?"
 
 ### hasReferee (sous-propriété de hasParticipant)
 - **Domaine**: Match
@@ -56,7 +61,7 @@ Voici une hiérarchie d'object properties (propriétés d'objets) organisée pou
 
 ### hasResult
 - **Domaine**: Match
-- **Range**: Résultat (classe à ajouter)
+- **Range**: Résultat
 - **Description**: Indique le résultat d'un match
 - **Répond aux questions**: "Quel est le résultat d'un match?"
 
@@ -73,12 +78,6 @@ Voici une hiérarchie d'object properties (propriétés d'objets) organisée pou
 - **Range**: Match
 - **Description**: Indique le match pendant lequel l'événement se produit
 - **Répond aux questions**: "Pendant quel match cet événement s'est-il produit?"
-
-### occursAtTime
-- **Domaine**: But | Carton | Faute | Remplacement
-- **Range**: xsd:int
-- **Description**: Indique à quel moment l'événement se produit (minute)
-- **Répond aux questions**: "À quel moment cet événement s'est-il produit?"
 
 ### resultsIn (sous-propriété de hasTemporalRelation)
 - **Domaine**: Faute
@@ -99,12 +98,6 @@ Voici une hiérarchie d'object properties (propriétés d'objets) organisée pou
 - **Range**: Joueur
 - **Description**: Joueur qui entre
 - **Répond aux questions**: "Quel joueur entre en remplacement?"
-
-### decidedBy (sous-propriété de hasParticipant)
-- **Domaine**: Remplacement
-- **Range**: Entraineur
-- **Description**: Entraineur qui décide du remplacement
-- **Répond aux questions**: "Qui a décidé ce remplacement?"
 
 ## Propriétés liées aux Personnes
 
@@ -140,12 +133,6 @@ Voici une hiérarchie d'object properties (propriétés d'objets) organisée pou
 - **Description**: Relie une équipe à ses joueurs
 - **Répond aux questions**: "Quels joueurs font partie de cette équipe?"
 
-### hasCoach (sous-propriété de hasParticipant)
-- **Domaine**: Équipe
-- **Range**: Entraineur
-- **Description**: Relie une équipe à son entraineur
-- **Répond aux questions**: "Qui entraîne cette équipe?"
-
 ### hasStaff (sous-propriété de hasParticipant)
 - **Domaine**: Équipe
 - **Range**: Personnel
@@ -154,7 +141,7 @@ Voici une hiérarchie d'object properties (propriétés d'objets) organisée pou
 
 ### representsClub (sous-propriété de hasRole)
 - **Domaine**: Equipe_de_club
-- **Range**: Club (classe à ajouter)
+- **Range**: Club 
 - **Description**: Relie une équipe au club qu'elle représente
 - **Répond aux questions**: "Quel club cette équipe représente-t-elle?"
 
@@ -178,12 +165,6 @@ Voici une hiérarchie d'object properties (propriétés d'objets) organisée pou
 - **Description**: Joueur qui marque le but
 - **Répond aux questions**: "Qui a marqué ce but?"
 
-### assistedBy (sous-propriété de involvePlayer)
-- **Domaine**: But
-- **Range**: Joueur
-- **Description**: Joueur qui fait la passe décisive
-- **Répond aux questions**: "Qui a fait la passe décisive pour ce but?"
-
 ### scoredFor (sous-propriété de hasParticipant)
 - **Domaine**: But
 - **Range**: Équipe
@@ -196,7 +177,7 @@ Voici une hiérarchie d'object properties (propriétés d'objets) organisée pou
 - **Description**: Équipe contre laquelle le but est marqué
 - **Répond aux questions**: "Contre quelle équipe ce but a-t-il été marqué?"
 
-## Propriétés inverses
+## On peut ajouter des Propriétés inverses si besoins :
 
 - **isParticipantOf** (inverse de hasParticipant)
 - **isMatchOf** (inverse de organiseMatch)
@@ -213,8 +194,7 @@ Voici une hiérarchie d'object properties (propriétés d'objets) organisée pou
 - **isPositionOf** (inverse de hasPosition)
 - **isSupporterOf** (inverse de supports)
 - **isPlayerOf** (inverse de hasPlayer)
-- **isCoachOf** (inverse de hasCoach)
 - **isStaffOf** (inverse de hasStaff)
 - **isScorerOf** (inverse de scoredBy)
 - **isAssistOf** (inverse de assistedBy)
-- 
+
