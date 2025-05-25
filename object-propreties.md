@@ -71,12 +71,16 @@ Voici une hiérarchie d'object properties (propriétés d'objets) organisée pou
 - **Description**: Indique le résultat d'un match
 - **Répond aux questions**: "Quel est le résultat d'un match?"
 
-
 ### hasMatchWinner
 - **Domaine**: Match
 - **Range**: Résultat
 - **Description**: Indique qui gange dans un match
 - **Répond aux questions**: "Quel est le résultat d'un match?"
+
+### isResultOf
+- **Domaine**: Résultat
+- **Range**: Match
+- **Description**: Indique le résultat du match
 
 
 ## Propriétés liées aux Événements de Match
