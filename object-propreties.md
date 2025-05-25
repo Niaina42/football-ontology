@@ -47,6 +47,12 @@ Voici une hiérarchie d'object properties (propriétés d'objets) organisée pou
 - **Description**: Indique l'équipe qui joue à domicile
 - **Répond aux questions**: "Quelle est l'équipe à domicile?"
 
+### hasAwayTeam (sous-propriété de hasParticipant)
+- **Domaine**: Match
+- **Range**: Équipe
+- **Description**: Indique l'équipe qui joue à l'exterieur
+- **Répond aux questions**: "Quelle est l'équipe à l'exterieur?"
+
 ### hasReferee (sous-propriété de hasParticipant)
 - **Domaine**: Match
 - **Range**: Arbitre
@@ -64,6 +70,14 @@ Voici une hiérarchie d'object properties (propriétés d'objets) organisée pou
 - **Range**: Résultat
 - **Description**: Indique le résultat d'un match
 - **Répond aux questions**: "Quel est le résultat d'un match?"
+
+
+### hasMatchWinner
+- **Domaine**: Match
+- **Range**: Résultat
+- **Description**: Indique qui gange dans un match
+- **Répond aux questions**: "Quel est le résultat d'un match?"
+
 
 ## Propriétés liées aux Événements de Match
 
