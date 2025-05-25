@@ -45,10 +45,6 @@
 - `Poste_Gardien` (type de `Gardien_de_but`)
 
 ## Instances de Joueur (PSG)
-- `Joueur_Mbappe` 
-  - `hasPosition: Poste_Attaquant_Centre`
-  - `memberOf: Equipe_PSG`
-  - `memberOf: Equipe_France`
 - `Joueur_Dembele` 
   - `hasPosition: Poste_Ailier_Droit`
   - `memberOf: Equipe_PSG`
@@ -58,9 +54,10 @@
   - `memberOf: Equipe_PSG`
 
 ## Instances de Joueur (Real Madrid)
-- `Joueur_Vinicius` 
-  - `hasPosition: Poste_Ailier_Gauche`
+- `Joueur_Mbappe` 
+  - `hasPosition: Poste_Attaquant_Centre`
   - `memberOf: Equipe_RealMadrid`
+  - `memberOf: Equipe_France`
 - `Joueur_Bellingham` 
   - `hasPosition: Poste_Milieu_Offensif`
   - `memberOf: Equipe_RealMadrid`
@@ -135,21 +132,21 @@
 - `Resultat_3_1` (France 3-1 Espagne)
 
 ## Instances d'Événements de Match (Match_PSG_Real)
-- `But_Mbappe_1` 
-  - `scoredBy: Joueur_Mbappe`
+- `But_Dembele_1` 
+  - `scoredBy: Joueur_Dembele`
   - `scoredFor: Equipe_PSG`
   - `scoredAgainst: Equipe_RealMadrid`
   - `occursDuring: Match_PSG_Real`
-  - `involvePlayer: Joueur_Mbappe`
+  - `involvePlayer: Joueur_Dembele`
 
-- `But_Vinicius_1` 
-  - `scoredBy: Joueur_Vinicius`
-  - `scoredFor: Equipe_RealMadrid`
-  - `scoredAgainst: Equipe_PSG`
+- `But_Dembele_2` 
+  - `scoredBy: Joueur_Dembele`
+  - `scoredFor: Equipe_PSG`
+  - `scoredAgainst: Equipe_RealMadrid`
   - `occursDuring: Match_PSG_Real`
-  - `involvePlayer: Joueur_Vinicius`
-
-- `But_Mbappe_2` 
+  - `involvePlayer: Joueur_Dembele`
+  - 
+- `But_Mbappe_1` 
   - `scoredBy: Joueur_Mbappe`
   - `scoredFor: Equipe_PSG`
   - `scoredAgainst: Equipe_RealMadrid`
@@ -178,23 +175,17 @@
   - `occursDuring: Match_France_Espagne`
   - `involvePlayer: Joueur_Mbappe`
 
-- `But_Mbappe_4` 
-  - `scoredBy: Joueur_Mbappe`
-  - `scoredFor: Equipe_France`
-  - `scoredAgainst: Equipe_Espagne`
-  - `occursDuring: Match_France_Espagne`
-  - `involvePlayer: Joueur_Mbappe`
-
 - `But_Morata` (ajoutez cette instance de joueur)
   - `scoredBy: Joueur_Morata`
   - `scoredFor: Equipe_Espagne`
   - `scoredAgainst: Equipe_France`
   - `occursDuring: Match_France_Espagne`
   - `involvePlayer: Joueur_Morata`
-
-- `But_Dembele_1` 
-  - `scoredBy: Joueur_Dembele`
-  - `scoredFor: Equipe_France`
-  - `scoredAgainst: Equipe_Espagne`
+ 
+- `But_Morata_2` 
+  - `scoredBy: Joueur_Morata`
+  - `scoredFor: Equipe_Espagne`
+  - `scoredAgainst: Equipe_France`
   - `occursDuring: Match_France_Espagne`
-  - `involvePlayer: Joueur_Dembele`
+  - `involvePlayer: Joueur_Morata`
+
